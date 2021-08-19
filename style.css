@@ -42,6 +42,7 @@ p {
   opacity: 0.7;
 }
 header {
+  height: 4em;
   display: flex;
   align-items: center;
   align-content: space-between;
@@ -52,7 +53,7 @@ header {
 
 .logo {
   font-size: 1.75rem;
-  counter-reset: var(--accent-clr);
+  color: var(--accent-clr);
   border: 3px solid var(--accent-clr);
   height: 1.5em;
   width: 1.5rem;
@@ -64,4 +65,48 @@ header {
 }
 .logo:hover {
   color: var(--text-clr);
+}
+
+.toggle {
+  cursor: pointer;
+}
+.toggle svg {
+  fill: var(--accent-clr);
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.toggle.close {
+  margin: 1em 0;
+}
+
+nav {
+  width: 100%;
+  max-width: 80vw;
+  position: fixed;
+  background: var(--bg-light-color);
+  top: 0;
+  right: -80vw;
+  bottom: 0;
+  height: 100%;
+  padding: 1em;
+  transition: all 0.35s ease-in-out;
+  z-index: 100;
+}
+
+.site-nav li a {
+  padding: 0.5em 0;
+  display: block;
+}
+/* Main Container */
+
+.main-container {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.hero-section {
+  min-height: calc(100vh - 10em);
 }
