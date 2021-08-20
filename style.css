@@ -109,4 +109,90 @@ nav {
 
 .hero-section {
   min-height: calc(100vh - 10em);
+  padding: 3em 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-container {
+  max-width: 650px;
+}
+
+.hero-top-section {
+  font-size: 1.5em;
+}
+.hero-top-section span {
+  color: var(--accent-clr);
+}
+.hero-title {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1;
+}
+.hero-subtitle {
+  font-size: 2em;
+  opacity: 0.7;
+  line-height: 1;
+}
+
+/* Cta */
+.custom-cta {
+  padding: 6px;
+  height: 40px;
+  background: var(--bg-light-color);
+  display: inline-flex;
+  align-items: center;
+  border-radius: 40px;
+}
+.custom-cta svg {
+  fill: var(--text-clr);
+  margin: 0;
+  width: 0;
+  padding: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.custom-cta span {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  color: var(--bg-clr);
+  background: var(--accent-clr);
+  padding: 0 1.5em;
+  font-size: 13px;
+  height: 28px;
+  border-radius: 28px;
+}
+
+section {
+  padding: 6em 0;
+}
+.section-title {
+  font-size: 1.75em;
+  font-weight: 700;
+  margin-bottom: 1.5em;
+}
+.section-title::before {
+  content: "/";
+  color: var(--accent-clr);
+  margin-right: 0.5em;
+}
+
+.technology-cards {
+  margin: 0 0 2em;
+}
+.technology-cards span {
+  display: inline-flex;
+  padding: 0.3em 1.5em;
+  margin: 0.2em;
+  font-size: 1em;
+  background: var(--bg-light-color);
+  border-radius: 2em;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+}
+.technology-cards span:hover {
+  background: var(--accent-clr);
+  color: var(--bg-clr);
 }
