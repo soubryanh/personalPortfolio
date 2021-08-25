@@ -313,3 +313,26 @@ section {
   height: 1em;
   width: 1em;
 }
+
+.work-title p {
+  font-size: 0.8em;
+}
+.work-technologies span {
+  padding: 0 0.5em;
+  font-weight: 400;
+}
+.contact-section {
+  background: var(--bg-light-color);
+}
+.contact-section h1 {
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-section p {
+  margin-top: 0;
+}
+.custom-cta.dark {
+  background: var(--bg-clr);
+}
