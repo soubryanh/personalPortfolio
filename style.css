@@ -253,3 +253,63 @@ section {
   background: var(--accent-clr);
   color: var(--bg-clr);
 }
+
+.jobcard {
+  padding: 1em;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  display: none;
+}
+.jobcard.active {
+  display: block;
+}
+.job-title {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.job-title span {
+  color: var(--accent-clr);
+}
+.responsibilities li {
+  opacity: 0.7;
+  margin: 1em;
+  display: block;
+  padding-left: 2em;
+  position: relative;
+  font-size: 0.8em;
+}
+
+.responsibilities li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--accent-clr);
+}
+.work-section {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 10px;
+}
+.work-card {
+  background: var(--bg-light-color);
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.work-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.folder {
+  fill: var(--accent-clr);
+  height: 2em;
+  width: 2em;
+}
+
+.work-top span svg {
+  fill: var(--text-clr);
+  height: 1em;
+  width: 1em;
+}
