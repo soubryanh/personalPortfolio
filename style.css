@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap");
-
 :root {
   --bg-clr: #102432;
   --bg-light-color: #152f40;
@@ -390,5 +388,38 @@ footer p {
   .btn:hover {
     background: var(--accent-clr);
     color: var(--bg-clr);
+  }
+
+  .hero-section::after {
+    content: "";
+    background-image: url("./src/1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30vw;
+    height: 30vw;
+    position: relative;
+    right: 0;
+    opacity: 0.3;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .hero-section:hover::after {
+    opacity: 1;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  .hero-container {
+    z-index: 2;
+  }
+  .hero-title {
+    font-size: 5em;
+  }
+  .hero-subtitle {
+    font-size: 3em;
+  }
+  .about-section {
+    display: flex;
+    align-items: center;
   }
 }
