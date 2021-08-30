@@ -422,4 +422,15 @@ footer p {
     display: flex;
     align-items: center;
   }
+  .about-content {
+    width: 60%;
+    padding-right: 2em;
+  }
+  .tab-layout {
+    display: flex;
+  }
+  .tab-titles {
+    flex-direction: column;
+    overflow-x: unset;
+  }
 }
