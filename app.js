@@ -5,6 +5,6 @@ document.querySelector(".open").addEventListener("click", () => {
   nav.classList.toggle("nav-open");
 });
 // Close
-document.querySelector(".cancel").addEventListener("click", () => {
+document.querySelector(".close").addEventListener("click", () => {
   nav.classList.toggle("nav-open");
 });
