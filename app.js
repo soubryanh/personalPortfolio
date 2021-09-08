@@ -25,3 +25,11 @@ const changeTab = (e, id) => {
   e.currentTarget.classList.add("active");
   document.getElementById(id).classList.add("active");
 };
+
+// Cleanup
+let navs = document.getElementsByClassName("site-link");
+for (let index = 0; index < navs.length; index++) {
+  navs[index].addEventListener("click", () => {
+    nav.classList.toggle("nav-open");
+  });
+}
