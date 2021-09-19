@@ -4,6 +4,14 @@
   --text-clr: #ffffff;
   --accent-clr: #ffda17;
   /* e88e29 df8118 ffda17 */
+  /*========== Colors ==========*/
+  --first-color: #ffda17;
+  --first-color-light: #152f40;
+  --body-color: #102432;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Quicksand", sans-serif;
+  --normal-font-size: 1rem;
 }
 /* reset default styles */
 *,
@@ -192,8 +200,8 @@ section {
   margin-right: 0.5em;
 }
 
-.technology-cards {
-  margin: 0 0 2em;
+/* .technology-cards {
+  margin: 2em 0 2em;
 }
 .technology-cards span {
   display: inline-flex;
@@ -208,7 +216,145 @@ section {
 .technology-cards span:hover {
   background: var(--accent-clr);
   color: var(--bg-clr);
+} */
+
+/*========== ICONS TOOLTIP ==========*/
+.social,
+.social__container,
+.social__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
+/* .social {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+} */
+
+.social__content {
+  position: relative;
+  padding: 0.5rem;
+  margin: 2rem 1rem;
+  background-color: var(--first-color-light);
+  border-radius: 1rem;
+  box-shadow: -2px -2px 8px #fafaff, 2px 2px 8px rgba(13, 12, 64, 0.2);
+  cursor: pointer;
+}
+
+.social__icon {
+  font-size: 2rem;
+  color: var(--first-color);
+  width: 35px;
+}
+
+.social__tooltip {
+  opacity: 0;
+  position: absolute;
+  padding: 0.5rem 1rem;
+  background-color: var(--first-color);
+  color: var(--first-color-light);
+  font-size: var(--normal-font-size);
+  white-space: nowrap;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  pointer-events: none;
+}
+
+.social__tooltip::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--first-color);
+  border-radius: 3px;
+}
+
+.social__content,
+.social__tooltip,
+.social__icon {
+  transition: 0.3s;
+}
+
+.social__content:hover {
+  background-color: var(--first-color);
+}
+
+.social__content:hover .social__icon {
+  color: var(--first-color-light);
+}
+
+/*========== Tooltip left ==========*/
+.social__tooltip-left {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.social__tooltip-left::after {
+  top: 50%;
+  transform: translate(50%, -50%) rotate(45deg);
+  right: 1px;
+}
+
+.social__content:hover .social__tooltip-left {
+  opacity: 1;
+  left: -1rem;
+}
+
+/*========== Tooltip top ==========*/
+.social__tooltip-top {
+  top: -2.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.social__tooltip-top::after {
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+  bottom: 1px;
+}
+
+.social__content:hover .social__tooltip-top {
+  opacity: 1;
+  top: -3.25rem;
+}
+
+/*========== Tooltip bottom ==========*/
+.social__tooltip-bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+
+.social__tooltip-bottom::after {
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  top: 1px;
+}
+
+.social__content:hover .social__tooltip-bottom {
+  opacity: 1;
+  bottom: -1rem;
+}
+
+/*========== Tooltip right  ==========*/
+.social__tooltip-right {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.social__tooltip-right::after {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: 1px;
+}
+
+.social__content:hover .social__tooltip-right {
+  opacity: 1;
+  right: -1rem;
+}
+
 .image-wrapper {
   width: 100%;
   max-width: 300px;
