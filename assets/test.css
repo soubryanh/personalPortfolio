@@ -27,7 +27,7 @@ body {
 }
 
 /*========== ICONS TOOLTIP ==========*/
-.social,
+/* .social,
 .social__container,
 .social__content {
   display: flex;
@@ -88,10 +88,10 @@ body {
 
 .social__content:hover .social__icon {
   color: var(--first-color-light);
-}
+} */
 
 /*========== Tooltip left ==========*/
-.social__tooltip-left {
+/* .social__tooltip-left {
   left: 0;
   transform: translateX(-100%);
 }
@@ -105,10 +105,10 @@ body {
 .social__content:hover .social__tooltip-left {
   opacity: 1;
   left: -1rem;
-}
+} */
 
 /*========== Tooltip top ==========*/
-.social__tooltip-top {
+/* .social__tooltip-top {
   top: -2.25rem;
   left: 50%;
   transform: translateX(-50%);
@@ -122,11 +122,11 @@ body {
 
 .social__content:hover .social__tooltip-top {
   opacity: 1;
-  top: -3.25rem;
-}
+  top: -3.25rem; */
+/* } */
 
 /*========== Tooltip bottom ==========*/
-.social__tooltip-bottom {
+/* .social__tooltip-bottom {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 100%);
@@ -141,10 +141,10 @@ body {
 .social__content:hover .social__tooltip-bottom {
   opacity: 1;
   bottom: -1rem;
-}
+} */
 
 /*========== Tooltip right  ==========*/
-.social__tooltip-right {
+/* .social__tooltip-right {
   right: 0;
   transform: translateX(100%);
 }
@@ -158,4 +158,76 @@ body {
 .social__content:hover .social__tooltip-right {
   opacity: 1;
   right: -1rem;
+} */
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #102432;
+  animation: changeColor 5s linear infinite;
+}
+
+@keyframes changeColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+section h2 {
+  color: #ffda17;
+  font-family: monospace;
+  font-weight: 300;
+  letter-spacing: 10px;
+}
+
+section .loader {
+  position: relative;
+  display: flex;
+}
+
+section .loader .dot {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 20px;
+  height: 20px;
+  background: var(--first-color);
+  box-shadow: 0 0 10px #ffda17;
+
+  /* 0 0 10px #ffda17, 0 0 40px #ffda17,
+    0 0 60px #ffda17, 0 0 80px #ffda17, 0 0 100px #ffda17; */
+  margin: 20px 10px;
+  transform: scale(0.1);
+  border-radius: 50%;
+
+  animation: animateDot 4s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+section .loader:last-child .dot {
+  animation: animateDot 4s linear infinite;
+  animation-delay: calc(-0.1s * var(--i));
+}
+
+@keyframes animateDot {
+  0% {
+    transform: scale(0.1);
+  }
+  10% {
+    transform: scale(2);
+  }
+  50%,
+  100% {
+    transform: scale(0.1);
+  }
 }

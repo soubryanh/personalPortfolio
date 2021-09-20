@@ -387,71 +387,84 @@ section {
   opacity: 1;
 }
 
-/* experience section */
+/* technologies section */
 
-/* .tab-titles {
-  display: flex;
-  margin-bottom: 1em;
-  overflow-x: scroll;
-}
-
-.tab-title {
-  padding: 0.5em 1em;
-  font-size: 1em;
-  margin-right: 1em;
-  background: var(--bg-light-color);
-  background-image: linear-gradient(
-    135deg,
-    #ffff77 0,
-    #fff14e 25%,
-    #f8d110 50%,
-    #deb100 75%,
-    #c79500 100%
-  );
-  border-radius: 0.3em;
-  cursor: pointer;
-  transition: all 0.35s ease-in-out;
-  white-space: nowrap;
-  margin-bottom: 1em;
-  min-width: 160px;
-}
-.tab-title:hover,
-.tab-title.active {
-  background: var(--accent-clr);
-  color: var(--bg-clr);
-}
-
-.jobcard {
-  padding: 1em;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
-  display: none;
-}
-.jobcard.active {
-  display: block;
-}
-.job-title {
-  font-size: 1.5em;
-  font-weight: 600;
-}
-.job-title span {
-  color: var(--accent-clr);
-}
-.responsibilities li {
-  opacity: 0.7;
-  margin: 1em;
-  display: block;
-  padding-left: 2em;
+section .lights {
   position: relative;
-  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-clr);
 }
 
-.responsibilities li::before {
-  content: ">";
-  position: absolute;
-  left: 0;
-  color: var(--accent-clr);
-} */
+section h2 {
+  color: #ffda17;
+  font-family: inherit;
+  font-weight: 300;
+  letter-spacing: 10px;
+}
+
+section .loader {
+  position: relative;
+  display: flex;
+  animation: changeColor 3s linear infinite;
+}
+
+@keyframes changeColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+section .loader .dot {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background: var(--first-color);
+  box-shadow: 0 0 10px #ffda17;
+  margin: 20px 10px;
+  transform: scale(0.1);
+  border-radius: 50%;
+  animation: animateDot 4s linear infinite;
+  animation-delay: calc(0.7s * var(--i));
+}
+
+section .loader:last-child .dot {
+  animation: animateDot1 2s linear infinite;
+  animation-delay: calc(-0.1s * var(--i));
+}
+
+@keyframes animateDot {
+  0% {
+    transform: scale(0.1);
+  }
+  10% {
+    transform: scale(5);
+  }
+  50%,
+  100% {
+    transform: scale(0.1);
+  }
+}
+
+@keyframes animateDot1 {
+  0% {
+    transform: scale(0.1);
+  }
+  10% {
+    transform: scale(1);
+  }
+  50%,
+  100% {
+    transform: scale(0.1);
+  }
+}
 
 .work-section {
   display: grid;
