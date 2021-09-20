@@ -190,6 +190,7 @@ section {
 
 .wrapper {
   display: inline-flex;
+  font-family: monospace;
 }
 .wrapper .dynamic-txts {
   margin-left: 15px;
@@ -258,7 +259,7 @@ section .loader .dot {
   border-radius: 50%;
 
   animation: animateDot 4s linear infinite;
-  animation-delay: calc(0.8s * var(--i));
+  animation-delay: calc(0.7s * var(--i));
 }
 
 section .loader:last-child .dot {
@@ -271,7 +272,7 @@ section .loader:last-child .dot {
     transform: scale(0.1);
   }
   10% {
-    transform: scale(2);
+    transform: scale(5);
   }
   50%,
   100% {

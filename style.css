@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap");
+
 :root {
   --bg-clr: #102432;
   --bg-light-color: #152f40;
@@ -386,7 +388,61 @@ section {
 .image-wrapper:hover img {
   opacity: 1;
 }
-
+/* Typing zone */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .dynamic-txts {
+  /* margin-left: 15px; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 88px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li {
+  color: #ffda17;
+  list-style: none;
+  font-size: 66px;
+  font-weight: 500;
+  font-family: "Quicksand", sans-serif;
+  position: relative;
+  top: 0;
+  animation: slide 8s steps(5) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -450px;
+  }
+}
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 10px;
+  /* animation: changeColor 3s linear infinite; */
+}
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--bg-clr);
+  border-left: 2px solid #ffda17;
+  animation: typing 1.6s steps(10) infinite;
+}
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
 /* technologies section */
 
 section .lights {
@@ -396,13 +452,6 @@ section .lights {
   flex-direction: column;
   align-items: center;
   background: var(--bg-clr);
-}
-
-section h2 {
-  color: #ffda17;
-  font-family: inherit;
-  font-weight: 300;
-  letter-spacing: 10px;
 }
 
 section .loader {
@@ -428,7 +477,7 @@ section .loader .dot {
   height: 20px;
   background: var(--first-color);
   box-shadow: 0 0 10px #ffda17;
-  margin: 20px 10px;
+  margin: 50px 10px;
   transform: scale(0.1);
   border-radius: 50%;
   animation: animateDot 4s linear infinite;
@@ -466,6 +515,7 @@ section .loader:last-child .dot {
   }
 }
 
+/* Work section */
 .work-section {
   display: grid;
   grid-template-columns: 100%;
