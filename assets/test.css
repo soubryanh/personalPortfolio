@@ -181,13 +181,60 @@ section {
   }
 }
 
-section h2 {
+/* section h2 {
   color: #ffda17;
   font-family: monospace;
   font-weight: 300;
   letter-spacing: 10px;
-}
+} */
 
+.wrapper {
+  display: inline-flex;
+}
+.wrapper .dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li {
+  color: #ffda17;
+  list-style: none;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 8s steps(5) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -450px;
+  }
+}
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #102432;
+  border-left: 2px solid #ffda17;
+  animation: typing 1.6s steps(10) infinite;
+}
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
 section .loader {
   position: relative;
   display: flex;
@@ -211,7 +258,7 @@ section .loader .dot {
   border-radius: 50%;
 
   animation: animateDot 4s linear infinite;
-  animation-delay: calc(0.1s * var(--i));
+  animation-delay: calc(0.8s * var(--i));
 }
 
 section .loader:last-child .dot {
