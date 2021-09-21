@@ -538,6 +538,7 @@ section .loader:last-child .dot {
   height: 2em;
   width: 2em;
 }
+/* .work-top span a */
 
 .work-top span svg {
   fill: var(--text-clr);
@@ -548,16 +549,31 @@ section .loader:last-child .dot {
 .work-title {
   font-size: 1.5em;
   line-height: 1.2;
+  margin-bottom: 25px;
 }
 
+.img-calculator img {
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+}
 .work-title p {
   font-size: 0.8em;
 }
 .work-technologies span {
-  padding: 0 0.5em;
-  font-weight: 400;
+  display: inline-flex;
+  padding: 0.3em 1.5em;
+  margin: 0.2em;
+  font-size: 1em;
+  background: var(--bg-clr);
+  border-radius: 2em;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
 }
-
+.work-technologies span:hover {
+  background: var(--accent-clr);
+  color: var(--bg-clr);
+}
 .contact-section {
   background: var(--bg-light-color);
 }
