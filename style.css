@@ -557,6 +557,7 @@ section .loader:last-child .dot {
   padding: 0 0.5em;
   font-weight: 400;
 }
+
 .contact-section {
   background: var(--bg-light-color);
 }

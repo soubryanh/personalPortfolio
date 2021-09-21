@@ -34,7 +34,7 @@ nav {
 
 .hero-section::after {
   content: "";
-  background-image: url("./1.jpg");
+  background-image: url("https://i.ibb.co/rZ0R5Zw/IMG-4148.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 30vw;
