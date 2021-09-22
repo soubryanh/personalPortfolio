@@ -555,6 +555,7 @@ section .loader:last-child .dot {
 .img-calculator img {
   position: relative;
   width: 100%;
+  /* max-width: 500px; */
   border-radius: 5px;
 }
 .work-title p {
